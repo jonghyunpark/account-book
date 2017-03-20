@@ -40,6 +40,7 @@ class Journal(models.Model):
     credit = models.ForeignKey(Account, null=True, related_name='credit')
     name = models.TextField(blank=True)
     amount = models.DecimalField(max_digits=12, decimal_places=0, blank=True, null=True)
+    transaction_date = models.DateTimeField('transaction date', editable=True)
     create_date = models.DateTimeField('date created', auto_now_add=True)
     update_date = models.DateTimeField('date updated', auto_now=True)
 
