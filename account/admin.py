@@ -10,6 +10,7 @@ class TransactionAdmin(admin.ModelAdmin):
 
 class JournalAdmin(admin.ModelAdmin):
     list_display = ('user_key', 'group', 'debit', 'credit', 'name', 'amount', 'transaction_date')
+    ordering = ('-transaction_date', )
 
 admin.site.register(Account, AccountAdmin)
 admin.site.register(Transaction, TransactionAdmin)
